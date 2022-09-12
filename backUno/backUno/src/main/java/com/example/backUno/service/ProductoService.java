@@ -15,8 +15,8 @@ public class ProductoService {
 	@Autowired
 	private ProductoRepository productoRepository;
 	
-	public void guardar (Producto producto) {
-		productoRepository.save(producto);
+	public Producto guardar (Producto producto) {
+		return productoRepository.save(producto);
 	}
 	
 	public List<Producto> obtenerPctos(){
@@ -27,8 +27,8 @@ public class ProductoService {
 		return productoRepository.findById(id);
 	}
 	
-	public void actualizar (Producto producto) {
-		productoRepository.save(producto);
+	public Producto actualizar (Producto producto) {
+		return productoRepository.save(producto);
 	}
 	
 	public void eliminar(Integer id){

@@ -15,8 +15,8 @@ public class CategoriaService {
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	
-	public void guardar (Categoria categoria) {
-		categoriaRepository.save(categoria);
+	public Categoria guardar (Categoria cate) {
+		return categoriaRepository.save(cate);
 	}
 	
 	public List<Categoria> obtenerCates(){
@@ -27,8 +27,8 @@ public class CategoriaService {
 		return categoriaRepository.findById(id);
 	}
 	
-	public void actualizar (Categoria categoria) {
-		categoriaRepository.save(categoria);
+	public Categoria actualizar (Categoria categoria) {
+		return categoriaRepository.save(categoria);
 	}
 	
 	public void eliminar(Integer id){
